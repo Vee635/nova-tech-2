@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaTech Support Desk</title>
+    <meta
+      name="description"
+      content="NovaTech support center for submitting service tickets and tracking support issues."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand" aria-label="NovaTech brand">
+          <div class="brand-mark">N</div>
+          <div>
+            <span class="brand-name">NovaTech</span>
+            <small>Support Desk</small>
+          </div>
+        </div>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#ticket-form">Submit Ticket</a>
+          <a href="#recent-tickets">Recent Tickets</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="overview">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Service reliability</p>
+            <h1>Fast help for every IT issue.</h1>
+            <p class="lead">
+              Report problems, request support, and record service requirements in a clean,
+              structured ticketing system designed for modern operations teams.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#ticket-form">Log a ticket</a>
+              <a class="btn btn-secondary" href="#recent-tickets">View recent records</a>
+            </div>
+
+            <ul class="hero-highlights">
+              <li>Priority-based triage</li>
+              <li>Issue tracking by category</li>
+              <li>Repository-backed ticket records</li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <div class="metric-card">
+              <span class="metric-label">Avg. response</span>
+              <strong>2 hrs</strong>
+            </div>
+            <div class="metric-card accent">
+              <span class="metric-label">Open tickets</span>
+              <strong>18</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Resolved this week</span>
+              <strong>42</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-bar">
+        <div class="container stats-grid">
+          <div>
+            <span>Uptime</span>
+            <strong>99.8%</strong>
+          </div>
+          <div>
+            <span>Support SLA</span>
+            <strong>Priority-based</strong>
+          </div>
+          <div>
+            <span>Issue categories</span>
+            <strong>8 active</strong>
+          </div>
+          <div>
+            <span>Repository sync</span>
+            <strong>Live</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticket-section" id="ticket-form">
+        <div class="container form-grid">
+          <div class="card form-card">
+            <div class="section-heading">
+              <p class="eyebrow dark">Submit support request</p>
+              <h2>Ticket intake form</h2>
+            </div>
+
+            <form id="support-form" novalidate>
+              <div class="field-grid two-col">
+                <label>
+                  Full name
+                  <input type="text" name="name" id="name" placeholder="Jane Smith" required />
+                </label>
+
+                <label>
+                  Email address
+                  <input type="email" name="email" id="email" placeholder="jane@company.com" required />
+                </label>
+              </div>
+
+              <div class="field-grid two-col">
+                <label>
+                  Company / team
+                  <input type="text" name="company" id="company" placeholder="NovaTech Labs" />
+                </label>
+
+                <label>
+                  Department
+                  <input type="text" name="department" id="department" placeholder="Operations" />
+                </label>
+              </div>
+
+              <div class="field-grid two-col">
+                <label>
+                  Issue type
+                  <select name="issueType" id="issueType">
+                    <option value="Hardware">Hardware</option>
+                    <option value="Network">Network</option>
+                    <option value="Software">Software</option>
+                    <option value="Security">Security</option>
+                    <option value="Access">Access / Permissions</option>
+                    <option value="General">General Inquiry</option>
+                  </select>
+                </label>
+
+                <label>
+                  Priority
+                  <select name="priority" id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                    <option value="Critical">Critical</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Subject
+                <input type="text" name="subject" id="subject" placeholder="VPN connection issue" required />
+              </label>
+
+              <label>
+                Description
+                <textarea
+                  name="description"
+                  id="description"
+                  rows="6"
+                  placeholder="Describe the outage, error, impact, and any steps already taken."
+                  required
+                ></textarea>
+              </label>
+
+              <label class="checkbox-row">
+                <input type="checkbox" id="consent" required />
+                <span>I agree that this issue may be logged for support follow-up.</span>
+              </label>
+
+              <button class="btn btn-primary submit-btn" type="submit">Submit Ticket</button>
+              <div id="form-status" class="status-message" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <aside class="card info-card">
+            <div class="section-heading">
+              <p class="eyebrow dark">Support process</p>
+              <h3>What happens next?</h3>
+            </div>
+
+            <ol class="process-list">
+              <li>Ticket is captured and validated.</li>
+              <li>Priority and category determine response order.</li>
+              <li>Support team reviews and assigns ownership.</li>
+              <li>Progress is tracked until resolution.</li>
+            </ol>
+
+            <div class="support-box">
+              <h4>Recommended response targets</h4>
+              <ul>
+                <li><strong>Critical:</strong> 1 hour</li>
+                <li><strong>High:</strong> 4 hours</li>
+                <li><strong>Medium:</strong> 1 business day</li>
+                <li><strong>Low:</strong> 2 business days</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="recent-tickets" id="recent-tickets">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Recent activity</p>
+            <h2>Latest support records</h2>
+          </div>
+
+          <div id="ticket-list" class="ticket-list" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <strong>NovaTech Support</strong>
+          <p>Keeping systems stable, secure, and operational.</p>
+        </div>
+        <div>
+          <span>Vee635 / nova-tech-2</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
